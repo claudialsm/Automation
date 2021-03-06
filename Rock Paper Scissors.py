@@ -7,15 +7,17 @@ print('ROCK, PAPER, SCISSORS')
 wins = 0
 losses = 0
 ties = 0
-numberOfTries = 0
+moves = {'r':'Rock','p':'Paper','s':'Scissors'}
+# numberOfTriesAllowed = 0 
 
-while True:
+while True: # The main game loop
     print(f'{wins} Wins, {losses} Losses, {ties} Ties!')
-    if numberOfTries > 0 :
+    """Used if a limited number of rounds need to be established
+    if numberOfTriesAllowed == 3 :
         break
     else : 
-        pass
-    while True:
+        pass """
+    while True: # The player input loop.
         print("Enter your move : (r)ock (p)aper (s)cissors or (q)uit")
         humanChoice = input()
         if humanChoice == 'q':
@@ -24,15 +26,15 @@ while True:
             break
         else:
             print("Please type one of the following : p, q, r, s")
-            True
 
     # computer's choice
-    choices = ['r','p','s']
-    computerChoice = choices[random.randint(0,2)]
+    #moves = {'r':'Rock','p':'Paper','s':'Scissors'}
+    computerChoice = random.choice(list(moves.keys())) #choices[random.randint(0,2)]
 
-    print("{} versus...".format(humanChoice))
-    print("{}!".format(computerChoice))
+    print("Player's {} versus...".format(moves[humanChoice]))
+    print("Computer's {}!".format(moves[computerChoice]))
 
+    # outcome of the match
     if humanChoice == 'r' and computerChoice == 's':
         wins += 1
         print("You won!")
@@ -54,4 +56,4 @@ while True:
     elif humanChoice == computerChoice :
         ties += 1
         print("It's a tie!")
-    numberOfTries += 1
+    #numberOfTriesAllowed += 1
