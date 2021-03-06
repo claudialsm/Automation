@@ -2,7 +2,7 @@
 
 import random, sys
 
-print('ROCK, PAPER, SCISSORS')
+print('READY...SET...GO! ROCK, PAPER, SCISSORS!')
 
 wins = 0
 losses = 0
