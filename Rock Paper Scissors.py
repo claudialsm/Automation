@@ -28,8 +28,7 @@ while True: # The main game loop
             print("Please type one of the following : p, q, r, s")
 
     # computer's choice
-    #moves = {'r':'Rock','p':'Paper','s':'Scissors'}
-    computerChoice = random.choice(list(moves.keys())) #choices[random.randint(0,2)]
+    computerChoice = random.choice(list(moves.keys()))
 
     print("Player's {} versus...".format(moves[humanChoice]))
     print("Computer's {}!".format(moves[computerChoice]))
